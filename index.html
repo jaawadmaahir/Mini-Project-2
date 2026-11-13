@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JM.DEV | Mohammad Jawad Mahir</title>
+<meta name="description" content="Portfolio of Mohammad Jawad Mahir, CSE student at IIUC interested in AI.">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050507;--fg:#f4f4f5;--mut:#a1a1aa;--card:#0d0d10;--line:#26262b;--acc:#a78bfa;--s1:#fff;--s2:#9ca3af;--g:rgba(139,124,246,.38)}
+.light{--bg:#f7f7fb;--fg:#0b0b10;--mut:#52525b;--card:#fff;--line:#e0e0e8;--acc:#7c5cf0;--s1:#18181b;--s2:#71717a;--g:rgba(139,124,246,.22)}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--fg);transition:background .3s,color .3s}
+.mut{color:var(--mut)}.acc{color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.silver{background:linear-gradient(90deg,var(--s1),var(--s2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{position:relative;overflow:hidden}
+.glow:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(500px 300px at 0% 0%,var(--g),transparent 70%),radial-gradient(600px 350px at 100% 100%,var(--g),transparent 70%)}
+.glow>*{position:relative}
+.nav a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{color:var(--acc)}.nav a.active{border-color:var(--acc)}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:.85rem;letter-spacing:.05em}
+.eyebrow:before{content:"";width:40px;height:1px;background:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 24px;font-size:.9rem;font-weight:500;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-w{background:var(--fg);color:var(--bg)}
+.btn-o{border:1px solid var(--fg)}
+.ico{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tile{display:grid;place-items:center;width:56px;height:56px;border-radius:14px;border:1px solid var(--line);flex:none}
+input,textarea{background:transparent;border:1px solid var(--line);border-radius:.75rem;padding:12px 16px;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--acc)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body class="antialiased">
+<svg width="0" height="0" class="absolute" aria-hidden="true"><defs>
+<symbol id="code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></symbol>
+<symbol id="cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6"/></symbol>
+<symbol id="cup" viewBox="0 0 24 24"><path d="M8 4h8v6a4 4 0 0 1-8 0zM8 6H4v2a3 3 0 0 0 4 3M16 6h4v2a3 3 0 0 1-4 3M12 14v4M8 20h8"/></symbol>
+<symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="win" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+<symbol id="pad" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10v5M4.5 12.5h5M16 11h.01M18 14h.01"/></symbol>
+<symbol id="plus" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><path d="M17 13v8M13 17h8"/></symbol>
+<symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="up" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="gh" viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.500M15 22v-3.500a3 3 0 0 0-.8-2.300c2.800-.3 5.800-1.400 5.800-6.200a4.800 4.800 0 0 0-1.300-3.300 4.500 4.500 0 0 0-.1-3.300s-1.100-.3-3.500 1.300a12 12 0 0 0-6.200 0C6.500 2.800 5.400 3.100 5.400 3.100a4.500 4.500 0 0 0-.1 3.300A4.800 4.800 0 0 0 4 9.700c0 4.800 3 5.900 5.800 6.200A3 3 0 0 0 9 18.200V22"/></symbol>
+<symbol id="in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8h.01M12 16v-5M12 13a2.500 2.500 0 0 1 5 0v3"/></symbol>
+<symbol id="yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.500v5l4.500-2.500z"/></symbol>
+<symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+<symbol id="fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.500 6.500h.01"/></symbol>
+<symbol id="x" viewBox="0 0 24 24"><path d="M4 4h4l12 16h-4zM4 20l6.500-7M20 4l-6.500 7"/></symbol>
+</defs></svg>
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 backdrop-blur border-b" style="border-color:var(--line);background:color-mix(in srgb,var(--bg) 80%,transparent)">
+<nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Main">
+  <a href="#home" class="flex items-center gap-3 font-bold tracking-tight"><span class="silver text-3xl font-extrabold italic" style="background:linear-gradient(135deg,#c4b5fd,#7c5cf0);-webkit-background-clip:text;background-clip:text">JM</span>JM.DEV</a>
+  <ul class="nav hidden items-center gap-8 text-sm lg:flex">
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#journey">Journey</a></li><li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="flex items-center gap-2">
+    <button id="theme" aria-label="Toggle light and dark mode" class="flex items-center gap-1 rounded-full border p-1" style="border-color:var(--line)">
+      <span id="sun" class="grid h-7 w-7 place-items-center rounded-full"><svg class="ico" style="width:16px;height:16px"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/></svg></span>
+      <span id="moon" class="grid h-7 w-7 place-items-center rounded-full"><svg class="ico" style="width:16px;height:16px"><path d="M21 12.800A9 9 0 1 1 11.200 3a7 7 0 0 0 9.800 9.800z"/></svg></span>
+    </button>
+    <button id="menu" aria-label="Open menu" aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-full border lg:hidden" style="border-color:var(--line)"><svg class="ico"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</nav>
+<ul id="mnav" class="nav hidden border-t px-6 py-2 text-sm lg:hidden" style="border-color:var(--line)">
+  <li><a class="block py-3" href="#home">Home</a></li><li><a class="block py-3" href="#about">About</a></li><li><a class="block py-3" href="#skills">Skills</a></li><li><a class="block py-3" href="#projects">Projects</a></li><li><a class="block py-3" href="#journey">Journey</a></li><li><a class="block py-3" href="#resume">Resume</a></li><li><a class="block py-3" href="#contact">Contact</a></li>
+</ul>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="glow border-b" style="border-color:var(--line)">
+<div class="relative mx-auto max-w-6xl px-6 py-20 lg:py-28">
+  <p class="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm" style="border-color:var(--line)">👋 Hello, I’m</p>
+  <h1 class="mt-5 text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">Mohammad Jawad <span class="silver">Mahir</span></h1>
+  <p class="mt-4 text-sm tracking-[.3em] sm:text-lg sm:tracking-[.35em]">Student &nbsp;•&nbsp; Developer &nbsp;•&nbsp; AI Enthusiast</p>
+  <p class="mt-8 max-w-md text-lg leading-snug">Turning ideas into modern web experiences.<br>Build better. Create more.</p>
+  <div class="mt-9 flex flex-wrap items-center gap-6">
+    <a href="#projects" class="btn btn-w">Explore My Work <svg class="ico" style="width:16px"><use href="#arr"/></svg></a>
+    <button id="intro" class="flex items-center gap-3 text-sm font-medium"><span class="grid h-11 w-11 place-items-center rounded-full border" style="border-color:var(--fg)">▶</span>Watch Intro</button>
+  </div>
+  <div class="pointer-events-none absolute bottom-10 top-10 hidden w-px lg:block" style="left:60%;background:linear-gradient(transparent,var(--acc),transparent)"><span class="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full" style="background:#fff;box-shadow:0 0 20px 6px var(--acc)"></span></div>
+  <div class="absolute right-6 top-1/2 hidden -translate-y-1/2 text-center text-sm tracking-[.4em] lg:block">DREAM • CODE • GROW<div class="mx-auto mt-3 h-px w-3/4" style="background:linear-gradient(90deg,transparent,var(--acc),transparent)"></div></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="glow border-b" style="border-color:var(--line)">
+<div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2">
+  <div>
+    <p class="eyebrow">ABOUT ME</p>
+    <h2 class="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">A Passionate Developer<br>Who Loves to <span class="acc">Build</span></h2>
+    <p class="mut mt-5 max-w-md leading-relaxed">I’m a BSc in CSE student at the International Islamic University Chittagong, deeply interested in AI. I love learning new technologies, solving real-world problems and creating something meaningful with code.</p>
+    <a href="#journey" class="btn btn-o mt-7">Know More <svg class="ico" style="width:16px"><use href="#arr"/></svg></a>
+  </div>
+  <div class="grid grid-cols-2 gap-4 self-center">
+    <div class="card flex items-center gap-4 p-4"><span class="tile"><svg class="ico"><use href="#code"/></svg></span><div><p class="text-2xl font-semibold">2</p><p class="mut text-sm">Projects Built</p></div></div>
+    <div class="card flex items-center gap-4 p-4"><span class="tile"><svg class="ico"><use href="#cap"/></svg></span><div><p class="text-2xl font-semibold">BSc CSE</p><p class="mut text-sm">at IIUC</p></div></div>
+    <div class="card flex items-center gap-4 p-4"><span class="tile"><svg class="ico"><use href="#cup"/></svg></span><div><p class="text-2xl font-semibold">4</p><p class="mut text-sm">Core Skills</p></div></div>
+    <div class="card flex items-center gap-4 p-4"><span class="tile"><svg class="ico"><use href="#bolt"/></svg></span><div><p class="text-2xl font-semibold">Always</p><p class="mut text-sm">Improving</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="border-b" style="border-color:var(--line)">
+<div class="mx-auto max-w-6xl px-6 py-20">
+  <p class="eyebrow">MY SKILLS</p>
+  <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Tools I <span class="acc">Work With</span></h2>
+  <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="card p-6"><h3 class="text-lg font-semibold">Python</h3><p class="mut mt-2 text-sm">Logic, scripting and early AI experiments.</p></div>
+    <div class="card p-6"><h3 class="text-lg font-semibold">JavaScript</h3><p class="mut mt-2 text-sm">Behaviour and interactivity for the web.</p></div>
+    <div class="card p-6"><h3 class="text-lg font-semibold">HTML</h3><p class="mut mt-2 text-sm">Semantic structure for every page.</p></div>
+    <div class="card p-6"><h3 class="text-lg font-semibold">CSS &amp; Tailwind</h3><p class="mut mt-2 text-sm">Responsive, clean styling.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="glow border-b" style="border-color:var(--line)">
+<div class="mx-auto max-w-6xl px-6 py-20">
+  <div class="flex items-end justify-between gap-4">
+    <div><p class="eyebrow">MY PROJECTS</p><h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Featured <span class="acc">Projects</span></h2><p class="mut mt-2">Some of my work that showcases my skills and creativity.</p></div>
+    <a href="https://github.com/jaawadmaahir" target="_blank" rel="noopener" class="hidden items-center gap-2 text-sm sm:flex">View All Projects <svg class="ico" style="width:16px"><use href="#arr"/></svg></a>
+  </div>
+  <div class="mt-10 grid gap-5 md:grid-cols-3">
+    <article class="card p-6"><svg class="ico" style="width:2rem;height:2rem"><use href="#win"/></svg><h3 class="mt-4 font-semibold">Student Result Management System</h3><p class="mut mt-1 text-sm">A system for students to track, manage and view academic results in one place.</p><a href="https://github.com/jaawadmaahir" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm">View Project <svg class="ico" style="width:14px"><use href="#up"/></svg></a></article>
+    <article class="card p-6"><svg class="ico" style="width:2rem;height:2rem"><use href="#pad"/></svg><h3 class="mt-4 font-semibold">Mini Game</h3><p class="mut mt-1 text-sm">A small game built for fun, a break from coursework to just build and play.</p><a href="https://github.com/jaawadmaahir" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm">View Project <svg class="ico" style="width:14px"><use href="#up"/></svg></a></article>
+    <article class="card p-6"><svg class="ico" style="width:2rem;height:2rem"><use href="#plus"/></svg><h3 class="mt-4 font-semibold">Next Project</h3><p class="mut mt-1 text-sm">Something with AI is in the works. Check back soon.</p><a href="#contact" class="mt-4 inline-flex items-center gap-2 text-sm">Let’s collaborate <svg class="ico" style="width:14px"><use href="#up"/></svg></a></article>
+  </div>
+</div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="border-b" style="border-color:var(--line)">
+<div class="mx-auto max-w-3xl px-6 py-20">
+  <p class="eyebrow">MY JOURNEY</p>
+  <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">How I <span class="acc">Got Here</span></h2>
+  <ol class="mt-10 space-y-8 border-l pl-8" style="border-color:var(--line)">
+    <li class="relative"><span class="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full" style="background:var(--acc)"></span><h3 class="font-semibold">Started BSc in CSE</h3><p class="mut text-sm">Began my Computer Science &amp; Engineering degree at IIUC.</p></li>
+    <li class="relative"><span class="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full" style="background:var(--acc)"></span><h3 class="font-semibold">Learned the fundamentals</h3><p class="mut text-sm">Python for logic, and HTML, CSS and JavaScript for the web.</p></li>
+    <li class="relative"><span class="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full" style="background:var(--acc)"></span><h3 class="font-semibold">Built real projects</h3><p class="mut text-sm">A Student Result Management System and a Mini Game.</p></li>
+    <li class="relative"><span class="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full" style="background:var(--acc)"></span><h3 class="font-semibold">Responsive portfolio</h3><p class="mut text-sm">Designed this site with Tailwind CSS and deployed it on GitHub Pages.</p></li>
+    <li class="relative"><span class="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full border-2" style="border-color:var(--acc)"></span><h3 class="font-semibold">Next: going deeper into AI</h3><p class="mut text-sm">Always learning, always improving.</p></li>
+  </ol>
+</div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="glow border-b" style="border-color:var(--line)">
+<div class="mx-auto max-w-6xl px-6 py-20">
+  <p class="eyebrow">RESUME</p>
+  <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">At a <span class="acc">Glance</span></h2>
+  <div class="mt-10 grid gap-5 md:grid-cols-3">
+    <div class="card p-6"><h3 class="font-semibold">Education</h3><p class="mut mt-2 text-sm">BSc in Computer Science &amp; Engineering<br>International Islamic University Chittagong (IIUC)</p></div>
+    <div class="card p-6"><h3 class="font-semibold">Skills</h3><p class="mut mt-2 text-sm">Python, JavaScript, HTML, CSS, Tailwind CSS</p></div>
+    <div class="card p-6"><h3 class="font-semibold">Interests</h3><p class="mut mt-2 text-sm">Artificial Intelligence, web development, building useful tools</p></div>
+  </div>
+  <a id="cv" href="resume.pdf" download hidden class="btn btn-w mt-8">Download Resume <svg class="ico" style="width:16px"><use href="#arr"/></svg></a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2">
+  <div>
+    <p class="eyebrow">CONTACT</p>
+    <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Let’s <span class="acc">Talk</span></h2>
+    <p class="mut mt-4 max-w-sm">Have a project in mind, or just want to talk AI? My inbox is open.</p>
+    <a href="mailto:mjawadmahir28@gmail.com" class="acc mt-6 inline-block font-medium underline underline-offset-4">mjawadmahir28@gmail.com</a>
+  </div>
+  <form id="form" class="space-y-4">
+    <div><label for="n" class="mb-1 block text-sm">Name</label><input id="n" required placeholder="Your name"></div>
+    <div><label for="e" class="mb-1 block text-sm">Email</label><input id="e" type="email" required placeholder="you@example.com"></div>
+    <div><label for="m" class="mb-1 block text-sm">Message</label><textarea id="m" rows="4" required placeholder="Write your message..."></textarea></div>
+    <button class="btn btn-w" type="submit">Send Message</button>
+  </form>
+</div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t" style="border-color:var(--line)">
+<div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-7 text-sm sm:flex-row">
+  <p>© 2026 Mohammad Jawad Mahir. All rights reserved.</p>
+  <div class="flex items-center gap-6">
+    <a href="#" aria-label="Facebook"><svg class="ico" style="width:24px;height:24px"><use href="#fb"/></svg></a>
+    <a href="#" aria-label="Instagram"><svg class="ico" style="width:24px;height:24px"><use href="#ig"/></svg></a>
+    <a href="#" aria-label="X"><svg class="ico" style="width:24px;height:24px"><use href="#x"/></svg></a>
+    <a href="#" aria-label="LinkedIn"><svg class="ico" style="width:24px;height:24px"><use href="#in"/></svg></a>
+    <a href="https://github.com/jaawadmaahir" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ico" style="width:24px;height:24px"><use href="#gh"/></svg></a>
+    <a href="mailto:mjawadmahir28@gmail.com" aria-label="Email"><svg class="ico" style="width:24px;height:24px"><use href="#mail"/></svg></a>
+    <a href="#" aria-label="YouTube"><svg class="ico" style="width:24px;height:24px"><use href="#yt"/></svg></a>
+  </div>
+</div>
+</footer>
+
+<div id="modal" class="fixed inset-0 z-[60] hidden place-items-center bg-black/70 p-6" role="dialog" aria-modal="true" aria-label="Intro">
+  <div class="card max-w-md p-8 hover:translate-y-0"><h3 class="text-xl font-semibold">Hi, I’m Jawad 👋</h3><p class="mut mt-3 leading-relaxed">I’m a CSE student at IIUC who loves building things with code and is curious about AI. This portfolio is my starting point, and there’s more to come.</p><button id="close" class="btn btn-w mt-6">Close</button></div>
+</div>
+
+<script>
+const root=document.documentElement,$=id=>document.getElementById(id);
+function setTheme(l){root.classList.toggle('light',l);$('sun').style.background=l?'var(--fg)':'transparent';$('sun').style.color=l?'var(--bg)':'inherit';$('moon').style.background=l?'transparent':'var(--fg)';$('moon').style.color=l?'inherit':'var(--bg)';}
+let light=false;try{light=localStorage.theme==='light'}catch(e){}
+setTheme(light);
+$('theme').onclick=()=>{light=!light;setTheme(light);try{localStorage.theme=light?'light':'dark'}catch(e){}};
+$('menu').onclick=()=>{const o=$('mnav').classList.toggle('hidden')===false;$('menu').setAttribute('aria-expanded',o)};
+$('mnav').querySelectorAll('a').forEach(a=>a.onclick=()=>$('mnav').classList.add('hidden'));
+$('intro').onclick=()=>{$('modal').classList.remove('hidden');$('modal').classList.add('grid')};
+const closeM=()=>{$('modal').classList.add('hidden');$('modal').classList.remove('grid')};
+$('close').onclick=closeM;$('modal').onclick=e=>{if(e.target===$('modal'))closeM()};
+document.onkeydown=e=>{if(e.key==='Escape')closeM()};
+const links=[...document.querySelectorAll('.nav a')];
+const spy=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section').forEach(s=>spy.observe(s));
+$('form').onsubmit=e=>{e.preventDefault();const n=$('n').value,m=$('m').value,em=$('e').value;location.href='mailto:mjawadmahir28@gmail.com?subject='+encodeURIComponent('Message from '+n)+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+em+')')};
+fetch('resume.pdf',{method:'HEAD'}).then(r=>{if(r.ok)$('cv').hidden=false}).catch(()=>{});
+</script>
+</body>
+</html>
